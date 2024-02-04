@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="grid grid-rows-[minmax(0,100px),auto] grid-cols-[minmax(0,300px),auto]">
+        <header className="col-span-2"></header>
+        <aside></aside>
+        <main>{children}</main></div></body>
     </html>
   );
 }
